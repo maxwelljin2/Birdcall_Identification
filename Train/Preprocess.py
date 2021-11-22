@@ -22,7 +22,6 @@ def save_mfcc(dataset_path, json_path, num_mfcc=13, n_fft=1024, hop_length=512, 
     num_mfcc_vectors_per_segment = math.ceil(samples_per_segment / hop_length)
 
     for i, (dirpath, dirnames, filenames) in enumerate(os.walk(dataset_path)):
-        # ensure we're processing a genre sub-folder level
         if dirpath is not dataset_path:
             
             # mapping the labels to the bird species
